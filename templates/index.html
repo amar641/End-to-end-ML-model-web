@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Fire Index Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="form-box">
+    <h2>Forest Fire Prediction</h2>
+    <form method="POST" action="/">
+        <label>Temperature (°C)</label>
+        <input type="number" name="Temperature" step="any" required>
+
+        <label>Relative Humidity (%)</label>
+        <input type="number" name="RH" step="any" required>
+
+        <label>Wind Speed (km/h)</label>
+        <input type="number" name="Ws" step="any" required>
+
+        <label>Rain (mm)</label>
+        <input type="number" name="Rain" step="any" required>
+
+        <label>FFMC</label>
+        <input type="number" name="FFMC" step="any" required>
+
+        <label>DMC</label>
+        <input type="number" name="DMC" step="any" required>
+
+        <label>DC</label>
+        <input type="number" name="DC" step="any" required>
+
+        <label>ISI</label>
+        <input type="number" name="ISI" step="any" required>
+
+        <label>BUI</label>
+        <input type="number" name="BUI" step="any" required>
+
+        <button type="submit">Predict</button>
+    </form>
+    
+</div>
+<h2>
+    The FWI prediction is {{result}}
+</body>
+</html>
